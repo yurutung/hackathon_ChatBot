@@ -1,7 +1,8 @@
 # ChatBot
 
-1. run py
+1. rasa
     ```
-    python run.py
+    rasa init
+    rasa run -m models --enable-api --cors "*" --debug
     ```
-2. get in url http://127.0.0.1:8090/chatbot
+

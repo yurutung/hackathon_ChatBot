@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    　　<title>Rasa Bot</title>
+</head>
+
+<body>
+
+    <h1>Hello!</h1>
+    <script>!(function () {
+            let e = document.createElement("script"),
+                t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+                // Replace 1.x.x with the version that you want
+                (e.async = !0),
+                (e.onload = () => {
+                    window.WebChat.default(
+                        {
+                            initPayload: '/greet',
+                            customData: { language: "en" },
+                            socketUrl: "https://5005-tan-capybara-rj1v2r6m.ws-us13.gitpod.io/",
+                            // socketUrl: "http://localhost:5005",
+                            title: 'Rasa bot'
+                            // add other props here
+                        },
+                        null
+                    );
+                }),
+                t.insertBefore(e, t.firstChild);
+        })();
+    </script>
+
+</body>
+
+</html>

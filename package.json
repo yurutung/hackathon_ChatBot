@@ -1,0 +1,27 @@
+{
+  "name": "hackathon_ChatBot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurutung/hackathon_ChatBot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yurutung/hackathon_ChatBot/issues"
+  },
+  "homepage": "https://github.com/yurutung/hackathon_ChatBot#readme",
+  "dependencies": {
+    "fastify": "^3.20.0",
+    "fastify-static": "^4.2.2"
+  }
+}

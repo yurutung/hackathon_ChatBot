@@ -10,7 +10,7 @@ fastify.register(require('fastify-static'), {
 
 
 // Run the server!
-fastify.listen(3000, function (err, address) {
+fastify.listen(5055, function (err, address) {
     if (err) {
         fastify.log.error(err)
         process.exit(1)

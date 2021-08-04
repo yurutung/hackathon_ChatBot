@@ -90,3 +90,53 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - who are you?
+    - am I talking to a human?
+    - is this a real person?
+    - are you there?
+
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it
+
+- intent: parking_space
+  examples: |
+    - parking space
+    - empty parking space
+    - I am in a hury
+    - I will be late
+    - I am running late
+    - I freak out
+    - drive me cary
+    - ****
+
+- intent: button_parking_space
+  examples: |
+    - button space
+    - button space 1
+
+- intent: button_parking_space_reserve
+  examples: |
+    - button parking reserve
+    - parking space reserve
+    - button parking space reserve
+
+- intent: input_employee_ID
+  examples: |
+    - required courses
+    - courses
+    - course
+    - required course
+    
+
+- intent: course
+  examples: |
+    - 120562
+    - 120561
+    - 120560
+    - 120563
+    - 120564
+

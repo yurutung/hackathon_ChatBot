@@ -28,3 +28,52 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: are you a robot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: path about time
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_time
+  - action: action_show_time
+
+- story: find a parking space
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: parking_space
+  - action: action_show_parking_space
+
+- story: button parking space
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: button_parking_space
+  - action: action_button_parking_space 
+
+- story: button parking space reserve
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: button_parking_space_reserve
+  - action: action_button_parking_space_reserve
+
+- story: button parking space reserve
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: button_parking_space_reserve
+  - action: action_button_parking_space_reserve
+
+- story: course inquiry
+  steps:
+  - intent: input_employee_ID
+  - action: utter_input_employee_ID
+  - intent: course
+  - action: utter_course
+
+

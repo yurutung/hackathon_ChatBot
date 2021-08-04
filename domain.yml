@@ -8,6 +8,18 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - give_time
+  - parking_space
+  - button_parking_space
+  - button_parking_space_reserve
+  - input_employee_ID
+  - course
+
+actions:
+  - action_show_time
+  - action_show_parking_space
+  - action_button_parking_space
+  - action_button_parking_space_reserve
 
 responses:
   utter_greet:
@@ -28,6 +40,37 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_parxking_space:
+  - text: "there are 50 space available:"
+    image: "static/B1.png"
+
+
+  utter_parking_space_reserve:
+  - text: "* reserving..... \ \n * parking space only retain for 10 min \ \n * your space No. is \ \n * 1062"
+    image: "static/B2.png"
+  
+  utter_input_employee_ID:
+  - text: "Please enter your employee ID:"
+
+  utter_course:
+  - text: "* Safety and health training - national occupational safety regulations......done \ \n
+           * Safety and health training - safety and health knoweledge........................undone \ \n 
+           * Safety and health training - daliy life reminder...........................................done \ \n
+           * E_NEO pre-employment training for new employees...................................done \ \n
+           * Information protection and information security advanced course...........undone"
+
+  - text: "* Safety and health training - national occupational safety regulations......undone \ \n
+           * Safety and health training - safety and health knoweledge........................done \ \n 
+           * Safety and health training - daliy life reminder...........................................undone \ \n
+           * E_NEO pre-employment training for new employees...................................done \ \n
+           * Information protection and information security advanced course...........undone"
+  
+  - text: "* Safety and health training - national occupational safety regulations......undone \ \n
+           * Safety and health training - safety and health knoweledge........................undone \ \n 
+           * Safety and health training - daliy life reminder...........................................undone \ \n
+           * E_NEO pre-employment training for new employees..................................undone \ \n
+           * Information protection and information security advanced course...........undone"
 
 session_config:
   session_expiration_time: 60

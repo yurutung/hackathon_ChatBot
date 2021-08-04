@@ -1,36 +1,68 @@
 <html>
-
-<head>
-    　　<title>Rasa Bot</title>
-</head>
-
-<body>
-
-    <h1>Hello!</h1>
-    <script>!(function () {
+  <head>
+    <link href ="styles/style.css" rel="stylesheet" type="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+    <body>
+      <div class = "bg">
+        <img src="static/backgroud.jpg">
+      </div>
+      <style>
+        .rw-conversation-container .rw-header{background-color: #666;}
+        .rw-conversation-container .rw-messages-container .rw-message .rw-client{background-color: #666;}
+        .rw-conversation-container .rw-messages-container .rw-replies{display: block;}
+        .rw-launcher{background-color: #666;}
+      </style>
+        <script>!(function () {
             let e = document.createElement("script"),
-                t = document.head || document.getElementsByTagName("head")[0];
+              t = document.head || document.getElementsByTagName("head")[0];
             (e.src =
-                "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
-                // Replace 1.x.x with the version that you want
-                (e.async = !0),
-                (e.onload = () => {
-                    window.WebChat.default(
-                        {
-                            initPayload: '/greet',
-                            customData: { language: "en" },
-                            socketUrl: "https://5005-tan-capybara-rj1v2r6m.ws-us13.gitpod.io/",
-                            // socketUrl: "http://localhost:5005",
-                            title: 'Rasa bot'
-                            // add other props here
-                        },
-                        null
-                    );
-                }),
-                t.insertBefore(e, t.firstChild);
-        })();
-    </script>
-
-</body>
-
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    socketUrl: "http://localhost:5005",
+                    customMessageDelay: (message) =>{
+                      let delay = message.length * 30;
+                      if (delay >  3 * 200) delay = 3 * 200;
+                      if (delay < 100) delay = 100;
+                      return delay;
+                    },
+                    tooltip: true,
+                    tooltipDelay: 500,
+                    params:{"storage": "session"},
+                    showCloseButton: true,
+                    fullScreenMode: true,
+                    showFullScreenButton: true,
+                    displayUnreadCount: true,
+                    inputTextFieldHint: "Hi. Type your message here...",
+                    badge: "",
+                    embedded: false,
+                    isChatOpen: false,
+                    title: "my TSMC 小秘書",
+                    subtitle: "ready to help 24/7",
+                    params: {
+                      images: {
+                        dims: {
+                          width: 300,
+                          height: 400
+                        }
+                      }
+                    }
+                  
+                    // add other props here
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+    </body>
 </html>

@@ -20,6 +20,7 @@ class ActionCheckMealCategory(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # setting meal category
         meal_category = {
             'dumplings': ['F7-八方雲集'],
             'rice': ['F7-高雄空廚'],

@@ -24,9 +24,9 @@ class ActionCheckMealCategory(Action):
         meal_category = {
             'dumplings': ['F7-八方雲集'],
             'rice': ['F7-高雄空廚'],
-            'juice': ['F2&5-果汁熊', 'F3-果真新鮮'],
-            'coffee': ['F7-Starbucks', 'F7-Louisa Coffee'],
-            'bread': ['F15A-品麵包', 'FAB14P5-多那之'],
+            'juice': ['F2&5-果汁熊', 'F3-果真新鮮', 'F18-果真新鮮'],
+            'coffee': ['F7-Starbucks', 'F7-Louisa', 'F12-Starbucks'],
+            'bread': ['F15A-品麵包', 'FAB14P5-多那之', 'F15B-哈拉烘焙'],
         }
         try:
             category = tracker.latest_message['entities'][0]['value']

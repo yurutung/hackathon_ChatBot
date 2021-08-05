@@ -28,3 +28,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: search meal place
+  steps: 
+  - intent: search_meal
+  - action: action_check_meal_category

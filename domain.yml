@@ -8,6 +8,10 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - search_meal
+
+actions:
+  - action_check_meal_category
 
 responses:
   utter_greet:
@@ -28,6 +32,13 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_place_found:
+  - text: "{place} has {category}!"
+  - text: "you can find {category} in {place}~~"
+
+  utter_place_not_found:
+  - text: "Hmm... not found~~"
 
 session_config:
   session_expiration_time: 60

@@ -90,3 +90,17 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: search_meal
+  examples: |
+    - where has [dumplings](meal_category)
+    - where can i buy [dumplings](meal_category)
+    - i want to buy [dumplings](meal_category)
+    - i want to eat [dumplings](meal_category)
+    - where has [juice](meal_category)
+    - i want to drink [juice](meal_category)
+    - where has [rice](meal_category)
+    - where has [noodle](meal_category)
+    - where has [coffee](meal_category)
+    - where has [bread](meal_category)
+

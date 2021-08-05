@@ -7,7 +7,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "start:rasa": "rasa run -m models --enable-api --cors \"*\" --debug",
+    "rasa": "rasa run -m models --enable-api --cors \"*\" --debug",
+    "action": "rasa run actions",
+    "train": "rasa train",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

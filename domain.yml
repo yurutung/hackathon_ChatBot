@@ -35,10 +35,12 @@ responses:
 
   utter_place_found:
   - text: "{place} has {category}!"
-  - text: "you can find {category} in {place}~~"
+  - text: "you can find {category} in {place} 😜"
+  - text: "{category} is waiting for you at {place} 😊"
 
   utter_place_not_found:
-  - text: "Hmm... not found~~"
+  - text: "Hmm... not found 😤"
+  - text: "i did not find this food 😢"
 
 session_config:
   session_expiration_time: 60

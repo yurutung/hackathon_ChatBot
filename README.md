@@ -62,7 +62,7 @@
     ```
     nlu:
     - intent: search_meal
-    examples: |
+        examples: |
         - where can i buy [dumplings](meal_category)
         ...
     ```

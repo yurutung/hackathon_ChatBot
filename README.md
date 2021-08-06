@@ -72,9 +72,9 @@
     ```
     stories:
     - story: search meal place
-    steps: 
-    - intent: search_meal
-    - action: action_check_meal_category
+        steps: 
+        - intent: search_meal
+        - action: action_check_meal_category
     ```
 [actions/actions.py](https://github.com/yurutung/hackathon_ChatBot/blob/master/actions/actions.py)
 * get user input meal category, get the place, then return the place. if not found, then return not found

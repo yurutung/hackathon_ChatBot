@@ -91,6 +91,22 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+
+- intent: input_employee_ID
+  examples: |
+    - required courses
+    - courses
+    - course
+    - required course
+
+- intent: course
+  examples: |
+    - 120562
+    - 120561
+    - 120560
+    - 120563
+    - 120564
+
 - intent: search_meal
   examples: |
     - where has [dumplings](meal_category)

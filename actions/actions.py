@@ -17,24 +17,27 @@ class ActionCheckMealCategory(Action):
 
     def name(self):
         return "action_check_meal_category"
+
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # setting meal category
         meal_category = {
             'dumplings': ['F7-八方雲集'],
-            'rice': ['F7-高雄空廚'],
-            'juice': ['F2&5-果汁熊', 'F3-果真新鮮'],
-            'coffee': ['F7-Starbucks', 'F7-Louisa Coffee'],
-            'bread': ['F15A-品麵包', 'FAB14P5-多那之'],
+            'rice': ['F7-高雄空廚', 'F7-鬍鬚張'],
+            'juice': ['F2&5-果汁熊', 'F3-果真新鮮', 'F18-果真新鮮'],
+            'coffee': ['F7-Starbucks', 'F7-Louisa', 'F12-Starbucks'],
+            'bread': ['F15A-品麵包', 'FAB14P5-多那之', 'F15B-哈拉烘焙'],
         }
         try:
             category = tracker.latest_message['entities'][0]['value']
             if category in meal_category:
                 place = random.choice(meal_category[category])
-                dispatcher.utter_message(response="utter_place_found", place=place, category=category)
+                dispatcher.utter_message(
+                    response="utter_place_found", place=place, category=category)
             else:
-                dispatcher.utter_message(response="utter_place_not_found")
+                dispatcher.utter_message(
+                    response="utter_place_not_found")
         except:
             dispatcher.utter_message(response="utter_place_not_found")
         return []

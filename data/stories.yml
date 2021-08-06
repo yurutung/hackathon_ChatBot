@@ -29,6 +29,14 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+
+- story: course inquiry
+  steps:
+  - intent: input_employee_ID
+  - action: utter_input_employee_ID
+  - intent: course
+  - action: utter_course
+
 - story: search meal place
   steps: 
   - intent: search_meal

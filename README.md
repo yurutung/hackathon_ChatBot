@@ -10,4 +10,4 @@
     `rasa run actions`
 
 4. open `index.html` and you can see rasa bot
-    >:warning: you can also run `node app.js` but you cannot see myTSMC3.0 image in website(可能是公司會擋掉!!)
+    > :warning: you can also run `node app.js` but you cannot see myTSMC3.0 image in website(可能是公司會擋掉!!)

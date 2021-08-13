@@ -8,17 +8,66 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - hello_world
+  - recommend_food
+  - button_find_food
+  - button_order_food
+  - key_website
+  - key_it
+  - key_itos
+  - button_restaurant
+  - restaurants_list
   - input_employee_ID
-  - course
   - search_meal
+  - give_time
+  - parking_space
+  - button_parking_space
+  - button_parking_space_reserve
+  - request_shuttle_bus
+  - request_timetable
+  - request_latest_shuttleBus
+  - quick_path
+  - 2999_online
+  - 4G_network_issue
+  - WIFI_network_issue
+  - batory_issue
+  - answer_for_4G_check_sim
+  - answer_for_4G_cellular
+  - submit_issue
+  - help
 
-actions:
-  - action_check_meal_category
+
+forms:
+  path_form:
+    initiating_station:
+    - type: from_text
+    terminal_station:
+    - type: from_text
+  # path_time_form:
+  #   initiating_station:
+  #   - type: from_text
+  #   terminal_station:
+  #   - type: from_text
+  #   Departure_time_hour:
+  #   - type: from_text
+  #   Departure_time_min:
+  #   - type: from_text
+
+
+slots:
+    initiating_station:
+      type: text
+    terminal_station:
+      type: text
+    # Departure_time_hour:
+    #    type: text
+    # Departure_time_min:
+    #    type: text
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: "Hi, 我是myTSMC小秘書, 有甚麼可以幫忙的嗎"
+  
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
@@ -34,41 +83,196 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+# ---------------------
+  utter_order_food:
+  - text: "Your order has been confirmed. You can take it at 12 : 20 pm."
 
+  utter_find_food:
+  - text: (https://meal/)
 
-  utter_input_employee_ID:
-  - text: "Please enter your employee ID:"
+  utter_restaurant:
+  - text: "Your order has been confirmed. You can take it at 12 pm."
+
+  utter_website:
+  - text: "I can help you find the website. Just tell me keywords!"
+
+  utter_it:
+  - text: "The following is websites about IT : ITOS, ITSR , ITOP. Which one is the correct one?"
+
+  utter_itos:
+  - text: "Here's ITOS Link!(http://itos-portal.gw.bcps.tsmc.com.tw/portal/#)"
 
   utter_course:
-  - text: "* Safety and health training - national occupational safety regulations......done \ \n
-           * Safety and health training - safety and health knoweledge..........................undone \ \n 
-           * Safety and health training - daliy life reminder...........................................done \ \n
-           * E_NEO pre-employment training for new employees...................................done \ \n
-           * Information protection and information security advanced course.............undone"
-  - text: "* Safety and health training - national occupational safety regulations........undone \ \n
-           * Safety and health training - safety and health knoweledge........................done \ \n 
-           * Safety and health training - daliy life reminder.............................................undone \ \n
-           * E_NEO pre-employment training for new employees...................................done \ \n
-           * Information protection and information security advanced course.............undone"
-  - text: "* Safety and health training - national occupational safety regulations........undone \ \n
-           * Safety and health training - safety and health knoweledge..........................undone \ \n 
-           * Safety and health training - daliy life reminder.............................................undone \ \n
-           * E_NEO pre-employment training for new employees....................................undone \ \n
-           * Information protection and information security advanced course.............undone"
-  - text: "* Safety and health training - national occupational safety regulations........done \ \n
-           * Safety and health training - safety and health knoweledge..........................undone \ \n 
-           * Safety and health training - daliy life reminder.............................................undone \ \n
-           * E_NEO pre-employment training for new employees....................................done \ \n
-           * Information protection and information security advanced course.............undone"
-  
+    - text: "* Safety and health training - national occupational safety regulations......done \ \n
+            * Safety and health training - safety and health knoweledge..........................undone \ \n 
+            * Safety and health training - daliy life reminder...........................................done \ \n
+            * E_NEO pre-employment training for new employees...................................done \ \n
+            * Information protection and information security advanced course.............undone"
+    - text: "* Safety and health training - national occupational safety regulations........undone \ \n
+            * Safety and health training - safety and health knoweledge........................done \ \n 
+            * Safety and health training - daliy life reminder.............................................undone \ \n
+            * E_NEO pre-employment training for new employees...................................done \ \n
+            * Information protection and information security advanced course.............undone"
+    - text: "* Safety and health training - national occupational safety regulations........undone \ \n
+            * Safety and health training - safety and health knoweledge..........................undone \ \n 
+            * Safety and health training - daliy life reminder.............................................undone \ \n
+            * E_NEO pre-employment training for new employees....................................undone \ \n
+            * Information protection and information security advanced course.............undone"
+    - text: "* Safety and health training - national occupational safety regulations........done \ \n
+            * Safety and health training - safety and health knoweledge..........................undone \ \n 
+            * Safety and health training - daliy life reminder.............................................undone \ \n
+            * E_NEO pre-employment training for new employees....................................done \ \n
+            * Information protection and information security advanced course.............undone"
+    
   utter_place_found:
-  - text: "{place} has {category}!"
-  - text: "you can find {category} in {place} 😜"
-  - text: "{category} is waiting for you at {place} 😊"
+    - text: "{place} has {category}!"
+    - text: "you can find {category} in {place} 😜"
+    - text: "{category} is waiting for you at {place} 😊"
 
   utter_place_not_found:
-  - text: "Hmm... not found 😤"
-  - text: "i did not find this food 😢"
+    - text: "Hmm... not found 😤"
+    - text: "i did not find this food 😢"
+  
+  utter_parking_space:
+  - text: "there are 50 space available:"
+    image: "static/B1.png"
+
+
+  utter_parking_space_reserve:
+  - text: "* reserving..... \ \n * parking space only retain for 10 min \ \n * your space No. is \ \n * 1062"
+    image: "static/B2.png"
+
+  utter_ask_initiating_station:
+  - text: "What is your initiating station"
+
+  utter_ask_terminal_station:
+  - text: "What is your terminal station"
+
+  utter_ask_departure_time_hour:
+  - text: "When do you want to leave in hour"
+
+  utter_ask_departure_time_min:
+  - text: "When do you want to leave in min"
+
+  utter_submit:
+  - text: "OK. Thanks!"
+
+  utter_slots_values:
+  - text: "Your path is from {initiating_station} to {terminal_station} \ \n Estimate time is below"
+  
+  utter_slots_values_time:
+  - text: "Your path is from {initiating_station} to {terminal_station} begin at {Departure_time_hour}:{Departure_time_min}\ \n Estimate time is below"
+
+  utter_latest_estimate_time:
+  - text: "* 14:00 \ \n * 14:15 \ \n * 14:30"
+  
+  utter_timetable:
+  - text: "* 17:05 \ \n * 17:20 \ \n * 17:35"
+
+  utter_2999_online:
+  - text: "Hi, please choose your issue"
+    buttons:
+    - title: "4G network issue"
+      payload: "/4G_network_issue"
+    - title: "WI-FI network issue"
+      payload: "/WIFI_network_issue" 
+    - title: "batory issue"
+      payload: "/batory_issue"
+
+  utter_4G_network_issue:
+  - text: "find your possible issue"
+    buttons:
+    - title: "check for your SIM card"
+      payload: "/answer_for_4G_check_sim"
+    - title: "check for your cellular"
+      payload: "/answer_for_4G_cellular"
+    - title: "hava no help, please decripe the issue and submit to us!"
+      payload: "/submit_issue" 
+
+  utter_WIFI_network_issue:
+  - text: "find your possible issue"
+    buttons:
+    - title: "A"
+      payload: "/greet"
+    - title: "B"
+      payload: "/greet"
+    - title: "no help"
+      payload: "/greet"  
+
+  utter_batory_issue:
+  - text: "find your possible issue"
+    buttons:
+    - title: "A"
+      payload: "/greet"
+    - title: "B"
+      payload: "/greet"
+    - title: "no help" 
+      payload: "/greet"
+
+  utter_4G_answer_check_sim:
+  - text: "step 1"
+    image: "static/troubleshooting_network.jpg"
+  utter_4G_answer_check_sim_2:
+  - text: "step 2"
+    image: "static/troubleshooting_sim2.jpg"
+
+  utter_4G_answer_cellular_data:
+  - text: "step 1"
+    image: "static/troubleshooting_cellular.png"
+  utter_4G_answer_cellular_data_2:
+  - text: "step 2"
+    image: "static/troubleshooting_cellular2.jpg" 
+
+  utter_submit_issue:
+  - text: "Please descripe your issue"
+    image: "static/troubleshooting_form.png"
+
+  utter_tc_timetable:
+  - text: "Hi, Taichung timtable is as below"
+    image: "static/TC-SITE.jpg"
+  
+  utter_help:
+  - text: "
+          * 🚗Parking: Find and reserve a parking space quickly \ \n
+          * 🚌Inter-Fab Shuttle bus: Quickly report traffic vehicle information \ \n
+          * ☎️2999: SOP can be mined and processed, you don’t have to wait for 2999 to be connected \ \n
+          * 🔭Course Query: Too busy and forget any courses that have not been completed (newcomers), no need to log in to e-learning \ \n
+          * 🔗links: content analysis of myTSMC website, providing quick link service \ \n
+          * 🍽️Meal classification: any meal in the factory may be recommended, and you can change the taste every day \ \n
+          "
+
+
+actions:
+  - action_food
+  - action_order_food
+  - action_find_food
+  - action_restaurants
+  - action_button_restaurant
+  - action_show_time
+  - action_show_parking_space
+  - action_button_parking_space
+  - action_button_parking_space_reserve
+  - action_shuttle_bus
+  - utter_slots_values
+  - utter_submit
+  - action_shuttlebus_path_form
+  - utter_slots_values_time
+  - utter_submit_time
+  - action_shuttlebus_path_time_form
+  - action_check_meal_category
+  - action_2999_online
+  - utter_4G_network_issue
+  - utter_WIFI_network_issue
+  - utter_batory_issue
+  - utter_4G_answer_check_sim
+  - utter_4G_answer_check_sim_2
+  - utter_4G_answer_cellular_data
+  - utter_4G_answer_cellular_data_2
+  - utter_submit_issue
+  - utter_help
+
+
+
 
 session_config:
   session_expiration_time: 60

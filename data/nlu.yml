@@ -91,6 +91,45 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
+- intent: hello_world
+  examples: |
+    - hello world
+    - hello_world
+    - hello_world!
+
+# -----------------------
+- intent: recommend_food
+  examples: |
+    -recommend food
+
+- intent: button_find_food
+  examples: |
+    -butoon find food
+
+- intent: button_order_food
+  examples: |
+    -button order food
+
+- intent: restaurants_list
+  examples: | 
+    - restaurants in fab
+    - restaurants
+
+- intent: button_restaurant
+  examples: | 
+    - button order
+
+- intent: key_website 
+  examples: |
+    - website
+
+- intent: key_it    
+  examples: |
+    - it
+
+- intent: key_itos
+  examples: |
+    - itos
 
 - intent: input_employee_ID
   examples: |
@@ -99,24 +138,113 @@ nlu:
     - course
     - required course
 
-- intent: course
-  examples: |
-    - 120562
-    - 120561
-    - 120560
-    - 120563
-    - 120564
-
 - intent: search_meal
   examples: |
-    - where has [dumplings](meal_category)
-    - where can i buy [dumplings](meal_category)
-    - i want to buy [dumplings](meal_category)
-    - i want to eat [dumplings](meal_category)
-    - where has [juice](meal_category)
-    - i want to drink [juice](meal_category)
-    - where has [rice](meal_category)
-    - where has [noodle](meal_category)
-    - where has [coffee](meal_category)
-    - where has [bread](meal_category)
+    - i want dumplings [dumplings](meal_category)
+    - where can i buy dumplings [dumplings](meal_category)
+    - dumplings [dumplings](meal_category)
+    - dumplings [dumplings](meal_category)
+    - i want juice [juice](meal_category)
+    - where can i buy juice [juice](meal_category)
+    - i want rice [rice](meal_category)
+    - where can i buy noodle [noodle](meal_category)
+    - i want coffee [coffee](meal_category)
+    - i want bread [bread](meal_category)
 
+- intent: give_time
+  examples: |
+    - can you tell me what time it is
+    - tell me the time
+    - got the time
+    - what time is it
+
+- intent: parking_space
+  examples: |
+    - parking space
+    - empty parking space
+    - I am in a hury
+    - I will be late
+    - I am running late
+    - I freak out
+    - drive me cary
+    - ****
+
+- intent: button_parking_space
+  examples: |
+    - button space
+    - button space 1
+
+- intent: button_parking_space_reserve
+  examples: |
+    - button parking reserve
+    - parking space reserve
+    - button parking space reserve
+
+- intent: request_shuttle_bus
+  examples: |
+    - inter fab shuttle bus
+    - shuttle bus
+
+- intent: request_timetable
+  examples: |
+    - timetable
+    - 168 timeble
+    - inter fab shuttle bus timetable
+    - time table
+
+- intent: request_latest_shuttleBus
+  examples: |
+    - latest shuttle bus
+    - latest bus 
+    - close one2
+    
+- intent: quick_path
+  examples: |
+    - I wnat from f15b to f15a
+    - from 15b to 15a
+
+- intent: 2999_online
+  examples: |
+    - 2999
+    - create issue
+    - app problem
+
+- intent: 4G_network_issue
+  examples: |
+    - 4g network issue
+    - 4g network prolem
+
+- intent: WIFI_network_issue
+  examples: |
+    - wifi network issue
+    - wifi network prolem
+    
+- intent: batory_issue
+  examples: |
+    - batory issue
+    - batory problem
+
+- intent: answer_for_4G_check_sim
+  examples: |
+    - when 4g conneciton is disable check sim card setting
+    - I wnat to check about sim setting
+    - answer for 4g internet issue
+
+- intent: answer_for_4G_cellular
+  examples: |
+    - when 4g connection is disable check cellular data
+    - I want to check the cellular is open or not
+    - answer for 4g internet issue
+
+- intent: submit_issue
+  examples: |
+    - submit the issue
+    - the answer did not help
+
+- intent: help
+  examples: |
+    - Hi bot I need some help
+    - need some help
+    - need help
+    - give me some tips
+    - tips

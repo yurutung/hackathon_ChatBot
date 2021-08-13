@@ -11,3 +11,41 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+# # shuttle buse time table
+# - rule: Activate form with time
+#   steps:
+#   - intent: request_timetable
+#   - action: path_time_form
+#   - active_loop: path_time_form
+
+# - rule: Submit form with time
+#   condition:
+#   - active_loop: path_time_form
+#   steps: 
+#   - action: path_time_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_slots_values_time
+#   # - action: utter_submit(addons)
+#   - action: utter_timetable
+
+# latest shuttle bus
+- rule: Activate form
+  steps:
+  - intent: request_latest_shuttleBus
+  - action: path_form
+  - active_loop: path_form
+
+- rule: Submit form
+  condition:
+  - active_loop: path_form
+  steps: 
+  - action: path_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_slots_values
+  # - action: utter_submit(addons)
+  - action: utter_latest_estimate_time

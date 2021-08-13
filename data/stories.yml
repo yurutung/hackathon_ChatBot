@@ -29,15 +29,145 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+#------------------
+
+- story: recommend food
+  steps:
+  - intent: recommend_food
+  - action: action_food
+
+- story: button order food
+  steps:
+  - intent: button_order_food
+  - action: action_order_food
+
+- story: button find food
+  steps:
+  - intent: button_find_food
+  - action: action_find_food
+
+- story: restaurants in fab
+  steps:
+  - intent: restaurants_list
+  - action: action_restaurants
+
+- story: button restaurants
+  steps:
+  - intent: button_restaurant
+  - action: action_button_restaurant
+
+- story: link1
+  steps:
+  - intent: key_website
+  - action: utter_website
+
+- story: link2
+  steps:
+  - intent: key_it
+  - action: utter_it
+
+- story: link3
+  steps:
+  - intent: key_itos
+  - action: utter_itos
 
 - story: course inquiry
   steps:
   - intent: input_employee_ID
-  - action: utter_input_employee_ID
-  - intent: course
   - action: utter_course
 
 - story: search meal place
   steps: 
   - intent: search_meal
   - action: action_check_meal_category
+
+- story: path about time
+  steps:
+  - intent: give_time
+  - action: action_show_time
+
+- story: find a parking space
+  steps:
+  - intent: parking_space
+  - action: action_show_parking_space
+
+- story: button parking space
+  steps:
+  - intent: button_parking_space
+  - action: action_button_parking_space 
+
+- story: button parking space reserve
+  steps:
+  - intent: button_parking_space_reserve
+  - action: action_button_parking_space_reserve
+
+- story: Inter-Fab Shuttle Bus
+  steps:
+  - intent: request_shuttle_bus
+  - action: action_shuttle_bus
+  # timetable
+  - intent: request_timetable
+  - action: utter_tc_timetable
+  # - active_loop: path_time_form
+  # - slot_was_set: 
+  #   - requested_slot: initiating_station
+  # - slot_was_set: 
+  #   - requested_slot: terminal_station
+  # - slot_was_set: 
+  #   - requested_slot: Departure_time_hour
+  # - slot_was_set: 
+  #   - requested_slot: Departure_time_min
+  # - slot_was_set: 
+  #   - requested_slot: null
+  # - active_loop: null
+  # - action: utter_slots_values_time
+  # # - action: utter_submit(addons)
+  # - action: utter_timetable
+  # latest_shuttlebus
+  - intent: request_latest_shuttleBus
+  - action: path_form
+  - active_loop: path_form
+  - slot_was_set: 
+    - requested_slot: initiating_station
+  - slot_was_set: 
+    - initiating_station: F15A
+  - slot_was_set: 
+    - requested_slot: terminal_station
+  - slot_was_set: 
+    - terminal_station: F15B
+  - slot_was_set: 
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_slots_values
+  # - action: utter_submit(addons)
+  - action: utter_latest_estimate_time
+
+- story: quick path
+  steps:
+  - intent: quick_path
+  - action: utter_slots_values 
+  - action: utter_latest_estimate_time
+
+- story: 2999 online
+  steps:
+  - intent: 2999_online
+  - action: action_2999_online
+  - intent: 4G_network_issue
+  - action: utter_4G_network_issue
+  - intent: answer_for_4G_check_sim
+  - action: utter_4G_answer_check_sim
+  - action: utter_4G_answer_check_sim_2
+  - intent: answer_for_4G_cellular
+  - action: utter_4G_answer_cellular_data
+  - action: utter_4G_answer_cellular_data_2
+  - intent: submit_issue
+  - action: utter_submit_issue
+  - intent: WIFI_network_issue
+  - action: utter_WIFI_network_issue
+  - intent: batory_issue
+  - action: utter_batory_issue
+
+- story: help
+  steps:
+  - intent: help
+  - action: utter_help
